@@ -4,6 +4,7 @@ import '../Rocet/Rocet.css'
 const Rocet = (rocet) => {
     const {mission_name, launch_year, mission_patch_small} = rocet;
     return (
+
         <div className={'wrap'}>
             <div>
                 <h2>{mission_name}</h2>
