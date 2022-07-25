@@ -1,29 +1,31 @@
+import {useEffect, useState} from "react";
+
 import './App.css';
-import {Users} from "./componets/Users/Users";
-import {useState} from "react";
-import {UserDetails} from "./componets/UserDetails/UserDetails";
-import {Posts} from "./componets/Posts/Posts";
+import {Users} from "./components/Users/Users";
+import {UserDetails} from "./components/UserDetails/UserDetails";
+import {Posts} from "./components/Posts/Posts";
+import {postService} from "./services/post.service";
 
 function App() {
-
     let [user, setUser] = useState(null);
-    let [postId, setPostId] = useState(null);
+    let [post, setPost] = useState(null);
 
     const getUser = (user) => {
         setUser(user)
     }
 
-    const getPostId = (id) => {
-      setPostId(id)
+    const getIdPost = (id) => {
+        setPost(id);
     }
+
 
     return (
         <div>
             <div className={'wrap'}>
                 <Users getUser={getUser}/>
-                {user && <UserDetails user={user} getPostId={getPostId}/>}
+                {user && <UserDetails user={user} getIdPost={getIdPost}/>}
             </div>
-            {postId && <Posts postId={postId}/>}
+            {post && <Posts post={post}/>}
         </div>
     );
 }

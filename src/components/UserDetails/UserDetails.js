@@ -1,9 +1,9 @@
 import React from 'react';
 
-const UserDetails = ({user, getPostId}) => {
+const UserDetails = ({user, getIdPost}) => {
     return (
         <>
-            <div className={'userDetails'}>
+            <div>
                 <div>
                     <div>{user.id}</div>
                     <div>{user.name}</div>
@@ -20,7 +20,7 @@ const UserDetails = ({user, getPostId}) => {
                     <div>{user.company.catchPhrase}</div>
                     <div>{user.company.bs}</div>
                 </div>
-                <button onClick={() => {getPostId(user.id)}}>Get Post</button>
+                <button onClick={() => {getIdPost(user.id)}}>post</button>
             </div>
         </>
     );
