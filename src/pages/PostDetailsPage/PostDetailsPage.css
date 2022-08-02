@@ -1,0 +1,17 @@
+.PostDetailsPage {
+    width: 50%;
+}
+
+.PostDetailsPage > ul, li, a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.PostDetailsPage button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: black;
+    color: red;
+    border: none;
+    cursor: pointer;
+}

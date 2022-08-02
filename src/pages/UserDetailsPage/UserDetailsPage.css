@@ -1,0 +1,17 @@
+.UserDetailsPage {
+    width: 50%;
+}
+
+.UserDetailsPage ul, li, a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.UserDetailsPage button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: black;
+    color: red;
+    border: none;
+    cursor: pointer;
+}
