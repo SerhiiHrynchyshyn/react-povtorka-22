@@ -1,7 +1,16 @@
 import {Routes, Route} from "react-router-dom";
 
 import './App.css';
-import {Layout, PostCommentsPage, PostDetailsPage, PostPage, UserDetailsPage, UserPostPage, UsersPage} from "./pages";
+import {
+    AlbumsPage,
+    Layout, PhotosPage,
+    PostCommentsPage,
+    PostDetailsPage,
+    PostPage,
+    UserDetailsPage,
+    UserPostPage,
+    UsersPage
+} from "./pages";
 
 
 function App() {
@@ -13,7 +22,12 @@ function App() {
                         <Route path={':id'} element={<UserDetailsPage/>}>
                             <Route path={'posts'} element={<UserPostPage/>}/>
                         </Route>
+
+                        <Route path={':id/albums'} element={<AlbumsPage/>}>
+                            <Route path={':albumId/photos'} element={<PhotosPage/>}/>
+                        </Route>
                     </Route>
+
 
                     <Route path={'posts'} element={<PostPage/>}>
                         <Route path={':id'} element={<PostDetailsPage/>}>
