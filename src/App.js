@@ -1,11 +1,12 @@
 import './App.css';
+import {Reducer} from "./components/Reducer/Reducer";
 
 function App() {
-  return (
-    <div>
-        <h1>hello</h1>
-    </div>
-  );
+    return (
+        <div>
+            <Reducer/>
+        </div>
+    );
 }
 
 export default App;
