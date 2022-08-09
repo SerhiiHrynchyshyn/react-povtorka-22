@@ -11,6 +11,12 @@ const reducer = (state, action) => {
         case 'add_dog':
             return {...state, dogs: [...state.dogs, {id: new Date().getTime(), name: action.payload.dog}]}
 
+        case 'delete_cat':
+            return {...state, cats: state.cats.filter(cat => cat.id !== action.payload.id)}
+        case 'delete_dog':
+            return {...state, dogs: state.dogs.filter(dog => dog.id !== action.payload.id)}
+
+
         default: throw new Error('myError')
     }
 }
